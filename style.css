@@ -1,0 +1,325 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  text-transform: uppercase;
+}
+
+.main {
+  background-color: black;
+  width: 100%;
+  height: auto;
+  background-image: url(./assets/bg-logo.jpg);
+  background-position: center;
+  background-repeat: no-repeat;
+  overflow: hidden;
+}
+
+.upper {
+  width: 100%;
+  height: 100px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.upper .logo {
+  flex: 30%;
+  display: flex;
+}
+
+.upper .logo img {
+  width: 100px;
+  height: 70px;
+}
+
+.upper .logo p {
+  color: orange;
+  letter-spacing: 2px;
+  display: flex;
+  align-items: center;
+}
+.upper .logo p:hover {
+  cursor: pointer;
+}
+
+.upper .nav {
+  flex: 70%;
+  color: white;
+  display: flex;
+  justify-content: space-around;
+}
+
+.upper .nav a {
+  text-decoration: none;
+  display: inline;
+  letter-spacing: 2px;
+  color: orange;
+  position: relative;
+}
+
+a::after {
+  content: "";
+  position: absolute;
+  background-color: orange;
+  height: 3px;
+  width: 0;
+  left: 0;
+  bottom: -10px;
+  transition: 0.3s;
+}
+
+.upper .nav a:hover::after {
+  cursor: pointer;
+  width: 100%;
+}
+
+.midsection {
+  width: 100%;
+  height: 90vh;
+}
+
+.midsection .advertise {
+  width: 45%;
+  height: 60vh;
+  float: left;
+  color: white;
+  letter-spacing: 2px;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+.advertise h5 {
+  font-size: 20px;
+  padding-right: 300px;
+  margin-bottom: 45px;
+  color: orange;
+}
+.advertise h1 {
+  font-size: 55px;
+  margin-bottom: 45px;
+  color: orange;
+}
+.advertise h6 {
+  font-size: 15px;
+  padding-left: 160px;
+  margin-bottom: 45px;
+  color: orange;
+}
+
+.midsection .form {
+  width: 45%;
+  height: 60vh;
+  float: left;
+  color: white;
+  display: flex;
+  justify-content: end;
+  align-items: center;
+}
+
+.formContainer {
+  width: 40%;
+  height: 40vh;
+  border: 1px solid orange;
+  border-radius: 20px;
+  padding: 10px;
+  position: relative;
+}
+
+.formContainer h1 {
+  text-align: center;
+  width: 100%;
+  background-color: orange;
+  border: 1px solid orange;
+  border-radius: 20px;
+}
+
+.formContainer td {
+  padding: 30px 10px;
+  color: orange;
+}
+
+.formContainer td input {
+  border: 1px solid orange;
+  border-radius: 10px;
+}
+
+.btn {
+  position: absolute;
+  left: 50%;
+  transform: translate(-50%);
+  color: white;
+  background-color: orange;
+  padding: 8px 8px;
+  border-radius: 10px;
+}
+
+@media only screen and (min-width: 1200px) {
+  .advertise h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .advertise h5 {
+    font-size: 15px;
+    padding-right: 300px;
+    margin-bottom: 20px;
+  }
+  .advertise h6 {
+    font-size: 10px;
+    padding-right: 135px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+  }
+  .formContainer {
+    width: auto;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 1200px) {
+  .advertise h1 {
+    font-size: 40px;
+    margin-bottom: 40px;
+  }
+  .advertise h5 {
+    font-size: 15px;
+    padding-right: 239px;
+    margin-bottom: 20px;
+  }
+  .advertise h6 {
+    font-size: 10px;
+    padding-right: 85px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+  }
+  .formContainer {
+    width: auto;
+    height: auto;
+  }
+}
+@media only screen and (max-width: 992px) {
+  .advertise h1 {
+    font-size: 30px;
+    margin-bottom: 30px;
+  }
+  .advertise h5 {
+    font-size: 12px;
+    padding-right: 217px;
+    margin-bottom: 20px;
+  }
+  .advertise h6 {
+    font-size: 10px;
+    padding-right: 85px;
+    padding-left: 0px;
+    margin-bottom: 20px;
+  }
+  .midsection .form {
+    margin-left: 30px;
+  }
+  .midsection .advertise {
+    margin-left: 20px;
+  }
+}
+@media only screen and (max-width: 768px) {
+  .midsection .advertise {
+    width: 100%;
+    height: 40vh;
+    text-align: center;
+    margin-left: 0px;
+    
+  }
+  .advertise h1 {
+    text-align: center;
+  }
+  .advertise h5 {
+    text-align: center;
+    padding-left: 239px;
+  }
+  .advertise h6 {
+    text-align: center;
+    padding-left: 112px;
+  }
+
+  .midsection .form {
+    width: 100%;
+    height: 40vh;
+    float: none;
+    justify-content: center;
+    margin-left: 0px;
+  }
+
+  .formContainer {
+    width: auto;
+    height: auto;
+  }
+
+  .upper .nav a {
+    font-size: 10px;
+  }
+}
+@media only screen and (max-width: 600px) {
+
+  .upper .nav a {
+    font-size: 5px;
+  }
+  .upper .logo p {
+    font-size: 5px;
+    padding: 0px;
+  }
+  .upper .logo img {
+    width: 50px;
+    height: 35px;
+  }
+  .formContainer{
+   margin-top: 150px;
+  }
+}
+@media only screen and (max-width: 320px) {
+
+  .upper .nav a {
+    font-size: 5px;
+  }
+  .upper .logo p {
+    font-size: 5px;
+    padding: 0px;
+  }
+  .upper .logo img {
+    width: 30px;
+    height: 28px;
+  }
+}
+/* @media only screen and (max-width: 600px) {
+  .upper {
+    width: 100%;
+    height: auto;
+  }
+
+  .upper .logo {
+    max-width: 100px;
+    height: 20vh;
+    position: relative;
+    top: 0%;
+    left: 25%;
+  }
+  .upper .logo img {
+    position: relative;
+    top: 25%;
+    left: 22%;
+  }
+  .upper .logo p {
+    text-align: center;
+  }
+
+  .upper .nav {
+    width: 100vw;
+  }
+
+  .upper .nav a {
+    display: block;
+    top: 150%;
+    left: -10%;
+    justify-content: center;
+    display: block;
+  }
+} */
